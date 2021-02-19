@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "i3systems_assignment"
+version = "0.1.0"
+description = ""
+authors = ["adimyth <mishraaditya6991@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.3.4"
+seaborn = "^0.11.1"
+pandas = "^1.2.2"
+numpy = "^1.20.1"
+scikit-learn = "^0.24.1"
+xgboost = "^1.3.3"
+jupyterlab = "^3.0.8"
+wordcloud = "^1.8.1"
+spacy = "^3.0.3"
+nltk = "^3.5"
+spellchecker = "^0.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
