@@ -117,6 +117,18 @@ There are 40 target classes.
 We could simply predict the most occuring class & that could serve as baseline. In our case, *Surgery* is the class with maximum number of rows - 1088.
 > Accuracy = 1088/4966 = 0.21
 
+## Evaluation
+### Accuracy
+Accuracy is the number of correct classifications divided by total number of samples
+
+### Matthews Correlation Coeffecient
+The Matthews correlation coefficient (MCC) is used as a measure of the quality of binary and multiclass classifications. It takes into account true and false positives and negatives and is generally regarded as a balanced measure which can be used even if the classes are of very different sizes.
+Ranges between -1 and +1.  A coefficient of +1 represents a perfect prediction, 0 an average random prediction and -1 an inverse prediction
+
+## Stratified KFold Validation
+Since the dataset is highly imbalance, I perform 5-Fold stratfied cross validation. Stratification helps to maintain the balance of each class in all the folds.
+Since, the number of samples for least frequent class is 6 (Hospice), I have chosen number of folds as 5
+
 ## Method
 On observing the data, it becomes clear that the classification can be done just based on few keywords which are specific to each set. Out of the 40 categories only 5-6 categories could have overlapping content. So approaching this is a **Bag of Words** model.
 
