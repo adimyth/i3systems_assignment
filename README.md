@@ -100,6 +100,14 @@ Postmortem
 #### HOSPICE
 Hospice care is a type of health care that focuses on the palliation of a terminally ill patient's pain and symptoms and attending to their emotional and spiritual needs at the end of life.
 
+### Possibly Overlapping Categories
+* **NEUROSURGERY** could be confused with SURGERY & NEUROLOGY fields
+* **OPTHALOMOLOGY** can be part of ENT
+* **NEPHROLOGY** deals with kidneys & so does UROLOGY
+* **PAIN MANAGEMENT** could have an overlap of multiple categories
+* **CHIROPRATIC** could be confused with Neurology
+* **RHEUMATOLOGY** - Deals with joints & muscles, which could overlap with many above fields
+
 ## Baselines
 ### Random Guessing
 There are 40 target classes.
