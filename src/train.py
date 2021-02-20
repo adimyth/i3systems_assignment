@@ -8,6 +8,7 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report, mat
 from sklearn.model_selection import StratifiedKFold
 from sklearn.naive_bayes import MultinomialNB
 
+
 NUM_SPLITS = 5
 RANDOM_STATE = 42
 
@@ -34,7 +35,7 @@ class TrainClassifier:
             y_train = X_train["Package"]
             y_valid = X_valid["Package"]
 
-            vec = TfidfVectorizer()
+            vec = TfidfVectorizer(sublinear_tf=True, min_df=2)
             train_term_doc = vec.fit_transform(X_train["Medical_Description"])
             valid_term_doc = vec.transform(X_valid["Medical_Description"])
 
@@ -46,6 +47,7 @@ class TrainClassifier:
 
             joblib.dump(vec, f"../pickles/tfidf_{fold}.joblib")
             joblib.dump(naive_bayes, f"../models/classifier_{fold}.joblib")
+        print(f"\n\n{classification_report(y_valid, valid_preds)}\n\n")
 
 
 if __name__ == "__main__":
